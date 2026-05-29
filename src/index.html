@@ -1,16 +1,304 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Assignment 3 - Landing Page</title>
+    <title>Tech.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <!-- ========== NAVBAR ========== -->
 
-    <!-- ========== HERO SECTION ========== -->
+  <body class="[font-family:'Inter',sans-serif] bg-black text-white overflow-x-hidden">
 
-    <!-- ========== FOOTER ========== -->
+    <!-- header -->
+    <header class="fixed top-0 left-0 right-0 z-[1000] h-16 lg:h-[84px] bg-black/60 backdrop-blur-[40px] [-webkit-backdrop-filter:blur(40px)] border-b border-white/[0.06]">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px] h-full flex items-center justify-between">
+        <a href="#" class="text-xl font-extrabold text-white no-underline tracking-[-0.3px] shrink-0">Tech.</a>
+
+        <nav class="hidden lg:flex gap-8">
+          <a href="#about" class="text-white no-underline text-sm font-medium opacity-80 hover:opacity-100 transition-opacity duration-200">About</a>
+          <a href="#services" class="text-white no-underline text-sm font-medium opacity-80 hover:opacity-100 transition-opacity duration-200">Service</a>
+          <a href="#work" class="text-white no-underline text-sm font-medium opacity-80 hover:opacity-100 transition-opacity duration-200">Our Work</a>
+          <a href="#team" class="text-white no-underline text-sm font-medium opacity-80 hover:opacity-100 transition-opacity duration-200">Team</a>
+        </nav>
+
+        <button class="hidden lg:inline-flex items-center justify-center w-[140px] h-11 rounded-full bg-[#421abc] hover:bg-[#5227cc] text-white text-sm font-semibold border-0 cursor-pointer transition-colors duration-200">
+          Contact Us
+        </button>
+
+        <button
+          class="lg:hidden flex flex-col justify-center gap-[5px] bg-transparent border-0 cursor-pointer p-[6px] w-9 h-9"
+          id="hamburger"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <span class="block w-[22px] h-0.5 bg-white rounded-sm"></span>
+          <span class="block w-[22px] h-0.5 bg-white rounded-sm"></span>
+          <span class="block w-[22px] h-0.5 bg-white rounded-sm"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- mobile menu -->
+    <div class="hidden [&.open]:flex fixed inset-0 z-[1200] bg-black flex-col px-6 pt-6 pb-10" id="mobileMenu">
+      <div class="flex items-center justify-between mb-10">
+        <a href="#" class="text-xl font-extrabold text-white no-underline tracking-[-0.3px]">Tech.</a>
+        <button class="bg-transparent border-0 text-white text-xl cursor-pointer p-1 leading-none" id="mobileMenuClose" aria-label="Close menu">
+          &#x2715;
+        </button>
+      </div>
+
+      <nav class="flex flex-col">
+        <a href="#about" class="text-white no-underline text-base font-medium py-[18px] border-t border-b border-white/[0.08]">About</a>
+        <a href="#services" class="text-white no-underline text-base font-medium py-[18px] border-b border-white/[0.08]">Service</a>
+        <a href="#work" class="text-white no-underline text-base font-medium py-[18px] border-b border-white/[0.08]">Our Work</a>
+        <a href="#team" class="text-white no-underline text-base font-medium py-[18px] border-b border-white/[0.08]">Team</a>
+      </nav>
+
+      <a href="#contact" class="flex items-center justify-center w-full h-[52px] rounded-full bg-[#421abc] hover:bg-[#5227cc] text-white no-underline text-base font-semibold mt-8 transition-colors duration-200">
+        Contact Us
+      </a>
+    </div>
+
+    <!-- hero -->
+    <section
+      class="pt-16 lg:pt-[84px] lg:min-h-[750px] bg-[linear-gradient(160deg,#000000_0%,#210a5e_80%)] lg:bg-[linear-gradient(180deg,#000000_0%,#210a5e_100%)] flex items-center overflow-hidden relative"
+      id="about"
+    >
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px] w-full pt-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-0 lg:gap-[18px]">
+        <div class="flex flex-col gap-4 lg:gap-6 max-w-full lg:max-w-[560px]">
+          <h1 class="text-[30px] min-[480px]:text-[36px] lg:text-[56px] font-extrabold leading-[1.15] tracking-[-0.02em] lg:tracking-[-0.03em] text-white">
+            Build with the <em class="italic">Future.</em>
+          </h1>
+          <p class="text-sm lg:text-lg leading-[1.6] text-[#717680] max-w-full lg:max-w-[520px]">
+            From building sleek websites and mobile apps to integrating AI
+            solutions, we help brands turn ideas into powerful digital
+            experiences that connect, engage, and scale.
+          </p>
+          <a
+            href="#contact"
+            class="mt-2 lg:mt-6 flex items-center justify-center w-full lg:w-[300px] h-[52px] rounded-full bg-[#421abc] hover:bg-[#5227cc] text-white no-underline text-base font-semibold transition-colors duration-200 lg:self-start"
+          >
+            Let's Talk
+          </a>
+        </div>
+
+        <div class="w-full lg:w-auto flex justify-center mt-8 lg:mt-0 self-center lg:self-end shrink-0">
+          <img
+            src="../assets/images/handphone.png"
+            alt="Tech. app on phone"
+            class="w-full max-w-[320px] lg:w-[590px] lg:max-w-none block lg:-mb-px"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- who we are -->
+    <section class="py-10 lg:py-20" id="about-desc">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px] flex flex-col gap-4">
+        <h2 class="text-[28px] lg:text-[40px] font-bold tracking-[-0.03em] text-white text-center mb-3">Who We Are</h2>
+        <p class="text-[15px] lg:text-xl font-normal leading-[1.65] tracking-[-0.02em] text-[#717680] text-center max-w-[860px] mx-auto">
+          We're a group of tech students trained in
+          <strong class="text-white font-semibold">building real-world digital products</strong>.<br />
+          From coding to design, we
+          <strong class="text-white font-semibold">craft modern solutions for modern problems</strong>.
+        </p>
+      </div>
+    </section>
+
+    <!-- what we do -->
+    <section class="py-10 lg:py-20" id="services">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px]">
+        <h2 class="text-[28px] lg:text-[40px] font-bold tracking-[-0.03em] text-white text-center mb-3">What We Do</h2>
+        <p class="text-sm lg:text-lg font-normal text-[#717680] text-center max-w-[600px] mx-auto mb-8 lg:mb-12 leading-[1.6]">
+          We offer simple tech solutions to help your ideas grow.
+        </p>
+
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-5">
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/Web Development.png" alt="Web Development" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">Web Development</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">Modern websites using HTML, CSS, JavaScript, and frameworks.</p>
+          </div>
+
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/App Development.png" alt="App Development" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">App Development</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">Mobile and desktop apps tailored for your needs</p>
+          </div>
+
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/AI Integration.png" alt="AI Integration" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">AI Integration</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">Smart solutions using AI-powered tools and automation.</p>
+          </div>
+
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/UI:UX Design.png" alt="UI/UX Design" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">UI/UX Design</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">Clean and functional designs for better user experience.</p>
+          </div>
+
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/Landing Page Design.png" alt="Landing Page Design" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">Landing Page Design</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">High-converting landing pages for your product or business.</p>
+          </div>
+
+          <div class="border border-[#181d27] rounded-xl p-4 lg:p-6 flex flex-col gap-3 lg:gap-5">
+            <img src="../assets/icons/CMS Integration.png" alt="CMS Integration" class="w-10 h-10 object-contain" />
+            <h3 class="text-sm lg:text-base font-bold text-white leading-[1.3]">CMS Integration</h3>
+            <p class="text-xs lg:text-sm text-[#717680] leading-[1.6] flex-1">Easy-to-manage websites with WordPress or Webflow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- our work -->
+    <section class="py-10 lg:py-20" id="work">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px]">
+        <h2 class="text-[28px] lg:text-[40px] font-bold tracking-[-0.03em] text-white text-center mb-3">Our Work</h2>
+        <p class="text-sm lg:text-lg font-normal text-[#717680] text-center max-w-[600px] mx-auto mb-8 lg:mb-12 leading-[1.6]">
+          See what we've built with passion and purpose
+        </p>
+
+        <div class="flex flex-col lg:flex-row gap-5 lg:gap-6">
+          <div class="flex-1 flex flex-col gap-3">
+            <img src="../assets/images/Our Work 1.png" alt="Portfolio 1" class="w-full rounded-xl block object-cover" />
+            <p class="text-sm font-medium text-[#717680]">Portofolio 1</p>
+          </div>
+          <div class="flex-1 flex flex-col gap-3">
+            <img src="../assets/images/Our Work 2.png" alt="Portfolio 2" class="w-full rounded-xl block object-cover" />
+            <p class="text-sm font-medium text-[#717680]">Portofolio 2</p>
+          </div>
+          <div class="flex-1 flex flex-col gap-3">
+            <img src="../assets/images/Our Work 3.png" alt="Portfolio 3" class="w-full rounded-xl block object-cover" />
+            <p class="text-sm font-medium text-[#717680]">Portofolio 3</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- meet the team -->
+    <section class="py-10 lg:py-20" id="team">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px]">
+        <h2 class="text-[28px] lg:text-[40px] font-bold tracking-[-0.03em] text-white text-center mb-3">Meet the Team</h2>
+        <p class="text-sm lg:text-lg font-normal text-[#717680] text-center max-w-[600px] mx-auto mb-8 lg:mb-12 leading-[1.6]">
+          A group of future-ready tech makers.
+        </p>
+
+        <div class="grid grid-cols-2 gap-x-4 gap-y-8 justify-items-center md:flex md:flex-wrap md:justify-center md:gap-6 lg:flex-nowrap lg:justify-between">
+          <div class="flex flex-col items-center gap-3 text-center w-full md:w-[calc(50%-12px)] lg:w-auto">
+            <img src="../assets/images/Jasper Kim 1.png" alt="Jasper Kim" class="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full object-cover" />
+            <h4 class="text-sm lg:text-base font-bold text-white">Jasper Kim</h4>
+            <p class="text-sm text-[#717680]">Project Manager</p>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-center w-full md:w-[calc(50%-12px)] lg:w-auto">
+            <img src="../assets/images/Alex Jonathan.png" alt="Alex Jonathan" class="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full object-cover" />
+            <h4 class="text-sm lg:text-base font-bold text-white">Alex Jonathan</h4>
+            <p class="text-sm text-[#717680]">Full-stack Developer</p>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-center w-full md:w-[calc(50%-12px)] lg:w-auto">
+            <img src="../assets/images/Mario Lopez.png" alt="Mario Lopez" class="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full object-cover" />
+            <h4 class="text-sm lg:text-base font-bold text-white">Mario Lopez</h4>
+            <p class="text-sm text-[#717680]">UI/UX Designer</p>
+          </div>
+          <div class="flex flex-col items-center gap-3 text-center w-full md:w-[calc(50%-12px)] lg:w-auto">
+            <img src="../assets/images/Jasper Kim 2.png" alt="Jasper Kim" class="w-[120px] h-[120px] lg:w-[180px] lg:h-[180px] rounded-full object-cover" />
+            <h4 class="text-sm lg:text-base font-bold text-white">Jasper Kim</h4>
+            <p class="text-sm text-[#717680]">Data Scientist</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact -->
+    <section class="py-10 lg:py-20" id="contact">
+      <div class="max-w-[720px] mx-auto px-5 md:px-12 lg:px-[140px]">
+        <h2 class="text-[28px] lg:text-[40px] font-bold tracking-[-0.03em] text-white text-center mb-3">Let's Collaborate</h2>
+        <p class="text-sm lg:text-lg font-normal text-[#717680] text-center max-w-[600px] mx-auto mb-8 lg:mb-12 leading-[1.6]">
+          Need a tech team? We're ready to help
+        </p>
+
+        <form class="flex flex-col gap-5" onsubmit="return false;">
+          <div class="flex flex-col gap-2">
+            <label for="name" class="text-sm font-medium text-[#a4a7ae]">Name</label>
+            <input
+              id="name"
+              type="text"
+              placeholder="Enter your name"
+              class="w-full px-4 py-[14px] rounded-[10px] border border-[#252837] bg-transparent text-white text-sm outline-none focus:border-[#421abc] transition-colors duration-200 placeholder-[#535962] [font-family:'Inter',sans-serif]"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="email" class="text-sm font-medium text-[#a4a7ae]">Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter your email"
+              class="w-full px-4 py-[14px] rounded-[10px] border border-[#252837] bg-transparent text-white text-sm outline-none focus:border-[#421abc] transition-colors duration-200 placeholder-[#535962] [font-family:'Inter',sans-serif]"
+            />
+          </div>
+
+          <div class="flex flex-col gap-2">
+            <label for="message" class="text-sm font-medium text-[#a4a7ae]">Message</label>
+            <textarea
+              id="message"
+              placeholder="Enter your message"
+              class="w-full px-4 py-[14px] rounded-[10px] border border-[#252837] bg-transparent text-white text-sm outline-none focus:border-[#421abc] transition-colors duration-200 placeholder-[#535962] h-[120px] resize-none [font-family:'Inter',sans-serif]"
+            ></textarea>
+          </div>
+
+          <button
+            type="submit"
+            class="w-full h-[52px] rounded-full bg-[#421abc] hover:bg-[#5227cc] text-white text-base font-semibold border-0 cursor-pointer transition-colors duration-200 [font-family:'Inter',sans-serif]"
+          >
+            Send
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="border-t border-[#181d27] py-5 md:py-7">
+      <div class="max-w-[1440px] mx-auto px-5 md:px-12 lg:px-[140px]">
+        <p class="text-sm text-[#535962] text-center">© 2025 Web Programming Hack. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      const hamburger = document.getElementById("hamburger");
+
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      const closeBtn = document.getElementById("mobileMenuClose");
+
+      function openMenu() {
+        mobileMenu.classList.add("open");
+
+        hamburger.setAttribute("aria-expanded", "true");
+
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeMenu() {
+        mobileMenu.classList.remove("open");
+
+        hamburger.setAttribute("aria-expanded", "false");
+
+        document.body.style.overflow = "";
+      }
+
+      hamburger.addEventListener("click", openMenu);
+
+      closeBtn.addEventListener("click", closeMenu);
+
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", closeMenu);
+      });
+    </script>
   </body>
 </html>
